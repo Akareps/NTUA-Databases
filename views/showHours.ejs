@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <style> <%- css.style %> </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See most "expensive" hours</title>
+</head>
+<body>
+<h1> See the hours customers spend the most</h1>
+
+<table border="3">
+    <tr>
+        <% for (var i=0; i < Object.getOwnPropertyNames(item[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (var i=0; i < item.length ; i++){ %>
+        <tr>
+            <% for (var j=0; j < Object.getOwnPropertyNames(item[0]).length; j++){ %>
+                <% var a = Object.getOwnPropertyNames(item[0])[j] %>
+                <td> <%= item[i][a]%>:00-<%= item[i][a]%>:59</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+<h3><button onclick="location.href='/index.html'"> Go Back To Home </button></h3>
+
+
+
+</body>
+</html>

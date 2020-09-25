@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> <%- css.style %> </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unsuccess</title>
+</head>
+<body>
+    <h1>Error</h1>
+    <h2>You have unsuccessfully <%= action %> a <%= type %></h2>
+    <% for (var i=0; i< errors.array().length; i++){ %>
+    <%= errors.array()[i].param %> <%= errors.array()[0].msg %> <br>
+    <% } %>
+    <h2><button onclick="location.href='<%= thepath%>'"> Fill Again The Form </button></h2>
+</body>
+</html>

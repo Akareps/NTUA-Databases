@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <style> <%- css.style %> </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search sales</title>
+</head>
+<body>
+    <h1>Make a query</h1>
+    <form action="/show/sales" method="POST">
+        Choose the store from which you want to see the sales: <br>
+        <select name="Storecopy">
+            <% for (let i=0; i< row1.length; i++){%>
+            <% if (row1[i].notavailable == null){%>
+            <option value="<%= row1[i].StoreID%>"><%='Store: ' + row1[i].StoreID%></option>
+            <%}%>
+            <%}%>
+        </select> <br>
+        Date of sales(from-to):
+        <input type="date" name="saledatefrom"> <input type="date" name="saledateto"> <br>
+        Amount of products bought(min-max):
+        <input type="text" name="productamountmin"> <input type="text" name="productamountmax"> <br>
+        Total cost of sale(min-max)
+        <input type="text" name="salecostmin"> <input type="text" name="salecostmax"> <br>
+        Method of payment
+        <input type="text" name="paymentmethod"> <br>
+        Product Category
+        <input type="text" name="productcategory"> <br>
+        <input type="submit" name="Submit" class = "submit">
+    
+    </form>
+</body>
+</html>

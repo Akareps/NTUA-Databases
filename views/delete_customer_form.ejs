@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style> <%- css.style %> </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete a customer</title>
+</head>
+<body>
+    <h1> Delete a customer </h1>
+    Please select the customer's ID you want to delete :<br>
+    <form action="/delete/customers" method="POST">
+        <select name="CardID">
+            <% for (var i=0; i< item.length; i++){%>
+                 <option value="<%= item[i].CardID %>"><%= item[i].CardID %></option>
+            <%}%>
+        </select>
+        <input type="submit" name="Submit" class = "submit"> 
+    
+    </form>
+</body>
+</html>

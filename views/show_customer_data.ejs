@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <style> <%- css.style %> </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See <%= table %></title>
+</head>
+<body>
+<h1> See the <%= table %>' data</h1>
+Customer's Profile
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item0[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item0[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item0.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item0[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item0[0])[j] %>
+                <td> <%= item0[i][a]%></td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Popular Products:
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item[0])[j] %>
+                <td> <%= item[i][a]%></td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Stores visited(<%=item1.length%>):
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item1[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item1[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item1.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item1[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item1[0])[j] %>
+                <td> <%= item1[i][a]%></td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Hours visited:
+<table border="1">
+    <tr>
+        <% for (let i=9; i < Object.getOwnPropertyNames(item2).length-3; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item2)[i]-1 %>:00 -  <%=Object.getOwnPropertyNames(item2)[i]-1%>:59</th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < 1 ; i++){ %>
+        <tr>
+            <% for (let j=9; j < Object.getOwnPropertyNames(item2).length-3; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item2)[j-1] %>
+                <td> <%= item2[a]%>%</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Average of transactions this week: <%let resa; if(item3[0].AverageOfWeek!=null) resa=item3[0].AverageOfWeek; else resa=0.00;%> <%=resa.toFixed(2)%>€<br>
+Average of transactions this month: <%let resa2; if(item4[0].AverageOfMonth!=null) resa2=item4[0].AverageOfMonth; else resa2=0.00%> <%=resa2.toFixed(2)%>€<br>
+
+<h3><button onclick="location.href='/index.html'"> Go Back To Home </button></h3>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style> <%- css.style %> </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete a product</title>
+</head>
+<body>
+    <h1> Delete a product </h1>
+    Please select the product's barcode you want to delete :<br>
+    <form action="/delete/products" method="POST">
+        <select name="Barcode">
+            <% for (var i=0; i< item.length; i++){%>
+                 <option value="<%= item[i].Barcode %>"><%= item[i].Barcode %></option>
+            <%}%>
+        </select>
+        <input type="submit" name="Submit" class = "submit"> 
+    
+    </form>
+</body>
+</html>

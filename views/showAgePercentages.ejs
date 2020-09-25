@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <style> <%- css.style %> </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search sales</title>
+</head>
+<body>
+<h1> See the <%= table %>' data</h1>
+Age percentages per hour:
+<table border="1">
+    <tr>
+        <th>Ages/Hours</th>
+        <% for (let i=9; i < 21; i++){ %>
+            <th> <%= i %>:00-<%=i%>:59</th>
+        <%}%>
+    </tr>
+    <% for (let i=1; i < 11 ; i++){ %>
+        <tr>
+            <td><%=i*10 %>-<%=i*10+9%></td>
+            <% for (let j=9; j < 21; j++){ %>
+                <td> <%= (item[i][j]*100).toFixed(2)%>%</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+
+<h3><button onclick="location.href='/index.html'"> Go Back To Home </button></h3>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update a customer </title>
+</head>
+<body>
+<h1> Update a Customer </h1>
+<form action="/update/customers" method="POST">
+    Select what to update:
+    <input type="radio" id="kidnum" name="theupdate" value="kidnum" required>
+    <label for="kidnum">Number of children</label>
+    <input type="radio" id="maritalstatus" name="theupdate" value="smarital">
+    <label for="maritalstatus">Marital status</label>
+    <input type="radio" id="bpoints" name="theupdate" value="bpoints">
+    <label for="bpoints">Bonus points</label><br>
+    Customer's ID
+    <input type="number" name="cid" required> <br>
+    Update children:
+    <input type="number" name="childrennum"> <br>
+    Update marital status:
+    <input type="text" name="marriage" pattern="Single|Married"> <br>
+    Update bonus points(new total):
+    <input type="number" name="cbonus"> <br>
+    <input type="submit" name="See Data" class = "submit">
+
+</form>
+</body>
+</html>

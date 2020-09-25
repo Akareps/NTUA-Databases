@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert a product</title>
+</head>
+<body>
+    <h2> Insert a product </h2>
+    <form action="/insert/products" method="POST">
+    Barcode:
+    <input type="text" name="bcode" pattern="^[0-9]{7}" required> <br>
+    Product name:
+    <input type="text" name="pname" required> <br>
+    Price:
+    <input type="text" name="pprice" pattern = "^[0-9]+([.][0-9][0-9])?" required> <br>
+    Type:
+    <input type="text" name="ptype" required> <br>
+    <input type="submit" name="Submit" class = "submit"> 
+    
+    </form>
+</body>
+</html>

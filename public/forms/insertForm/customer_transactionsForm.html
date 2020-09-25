@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert a transaction</title>
+</head>
+<body>
+    <h1> Insert a Customer's transaction </h1>
+    <form action="/insert/customer_transactions" method="POST">
+    Customer's ID
+    <input type="text" name="custid" required pattern="^[0-9]+|NULL"> <br>
+    Total cost:
+    <input type="text" name="totcost" min = "0.00" max = "9999" required pattern="^[0-9]+([.][0-9][0-9])?"> <br>
+    Time:
+    <input type="text" name="ttime" required pattern="^[0-2][0-9]:[0-5][0-9]"> <br>
+    Date:
+    <input type="date" name="tdate" required> <br>
+    Payment method
+    <input type="text" name="pmethod" required pattern="^Card|Cash"> <br>
+    Amount of products
+    <input type="number" name="pamount" required min="1"> <br>
+    Store's ID
+    <input type="number" name="idofstore" min = "1" max = "10" required> <br>
+    Barcodes
+    <textarea name="allproducts" rows="100" cols="5"></textarea>
+    <input type="submit" name="See Data" class = "submit">
+    
+    </form>
+</body>
+</html>

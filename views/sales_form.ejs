@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <style> <%- css.style %> </style> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search sales</title>
+</head>
+<body>
+    <h1>Make a query</h1>
+    <form action="/insert/borrows" method="GET">
+        Store:
+        <input type="date" name="IDofstore"> <br>
+        Date of sales:
+        <input type="date" name="saledate"> <br>
+        Amount of products bought:
+        <input type="text" name="productamount"> <br>
+        Total cost of sale
+        <input type="text" name="salecost"> <br>
+        Method of payment
+        <input type="text" name="paymentmethod"> <br>
+        Product Category
+        <input type="text" name="productcategory"> <br>
+        <input type="submit" name="Submit" class = "submit">
+    
+    </form>
+</body>
+</html>

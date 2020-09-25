@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert a Customer </title>
+</head>
+<body>
+    <h1> Insert a Customer </h1>
+    <form action="/insert/customers" method="POST">
+    Full name
+    <input type="text" name="fname" required> <br>
+    Children:
+    <input type="number" name="childrennum" min = "0" max = "20" required> <br>
+    Marital status:
+    <input type="text" name="marriage" required pattern="^Single|Married"> <br>
+    Birth date:
+    <input type="date" name="bdate" required> <br>
+    Store's ID
+    <input type="number" name="idofstore" min = "1" max = "10" required> <br>
+    <input type="submit" name="See Data" class = "submit"> 
+    
+    </form>
+</body>
+</html>

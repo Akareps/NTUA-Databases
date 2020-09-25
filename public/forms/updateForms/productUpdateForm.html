@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update a product </title>
+</head>
+<body>
+<h1> Update a product </h1>
+<form action="/update/products" method="POST">
+    Select what to update:
+    <input type="radio" id="pname" name="theupdate" value="pname" required>
+    <label for="pname">Name</label>
+    <input type="radio" id="pprice" name="theupdate" value="pprice">
+    <label for="pprice">Price</label><br>
+    Product's Barcode
+    <input type="number" name="bcode" required> <br>
+    Update Name:
+    <input type="text" name="prodname"> <br>
+    Update Price:
+    <input type="text" name="prodprice" pattern="^[0-9]+([.][0-9][0-9])?"> <br>
+    Price changing date:
+    <input type="date" name="pdate" required> <br>
+    <input type="submit" name="See Data" class = "submit">
+
+</form>
+</body>
+</html>

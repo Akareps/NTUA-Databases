@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert a product in a store</title>
+</head>
+<body>
+    <h1> Insert a product sold in a store </h1>
+    <form action="/insert/products_in_store" method="POST">
+    Store ID:
+    <input type="number" name="idofstore" min = "1" max = "10" required> <br>
+    Barcode:
+    <input type="text" name="bcode" required pattern = "^[0-9]{7}"> <br>
+    Label:
+    <input type="radio" id="True" name="plabel" value="True" required>
+    <label for="True">True</label>
+    <input type="radio" id="False" name="plabel" value="False" required>
+    <label for="False">False</label><br>
+    Aisle:
+    <input type="number" name="paisle" min = "1" max = "20" required> <br>
+    Shelf:
+    <input type="number" name="pshelf" min = "1" max = "20" required> <br>
+    <input type="submit" name="See Data" class = "submit"> 
+    
+    </form>
+</body>
+</html>

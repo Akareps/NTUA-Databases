@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <style> <%- css.style %> </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See <%= table %></title>
+</head>
+<body>
+<h1> See the <%= table %>' data</h1>
+Fridge:
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item1[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item1[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item1.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item1[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item1[0])[j] %>
+                <td> <%= (item1[i][a]*100).toFixed(2)%> %</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Fresh:
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item2[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item2[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item2.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item2[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item2[0])[j] %>
+                <td> <%= (item2[i][a]*100).toFixed(2)%> %</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Cellar
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item3[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item3[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item3.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item3[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item3[0])[j] %>
+                <td> <%= (item3[i][a]*100).toFixed(2)%> %</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Hygiene:
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item4[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item4[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item4.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item4[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item4[0])[j] %>
+                <td> <%= (item4[i][a]*100).toFixed(2)%> %</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+House:
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item5[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item5[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item5.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item5[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item5[0])[j] %>
+                <td> <%= (item5[i][a]*100).toFixed(2)%> %</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+Pet:
+<table border="3">
+    <tr>
+        <% for (let i=0; i < Object.getOwnPropertyNames(item6[0]).length; i++){ %>
+            <th> <%= Object.getOwnPropertyNames(item6[0])[i] %> </th>
+        <%}%>
+    </tr>
+    <% for (let i=0; i < item6.length ; i++){ %>
+        <tr>
+            <% for (let j=0; j < Object.getOwnPropertyNames(item6[0]).length; j++){ %>
+                <% let a = Object.getOwnPropertyNames(item6[0])[j] %>
+                <td> <%= (item6[i][a]*100).toFixed(2)%> %</td>
+            <%}%>
+        </tr>
+    <% } %>
+</table>
+<br><br>
+<h3><button onclick="location.href='/index.html'"> Go Back To Home </button></h3>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+NATIONAL TECHNICAL UNIVERSITY OF ATHENS
+DEPARTMENT OF ELECTRICAL ENGINEERING AND COMPUTER ENGINEERING
+
+Shopping cart analysis
+A large Super Market chain has decided to issue a customer loyalty card
+so that it can gather information about its customers and be able to make
+targeted marketing decisions. So he entrusted you with the implementation of one
+integrated system for storing, managing and analyzing information collected.
+The system must store information about the company's stores. There are
+a total of ten stores in three different cities in Greece. For the stores,
+we are interested in the opening hours, the address, the square meters of the store
+and the product categories offered.
+Products are offered from six categories: Fresh products, refrigerator items, wine items,
+toiletries, household items and pet products. In each category
+there are from ten to twenty products.
+For each product the system must store: its current value, the aisle
+of the store in which it is located, the shelf in which it is located and a special
+note whether the product is a store label or not. The system still has to
+keeps track of all product price changes.
+Each customer will have his personal card with which he will make purchases and win
+rewards. The system should store personal and family information of
+customers as well as the card number they use.
+For each user transaction the total purchase cost should be recorded,
+the number and type of products purchased, the time at which the
+transaction, method of payment.
+As part of the work you are invited to develop the application / website that will
+serve the above purpose. In more detail we must:
+1. Draw the ER diagram resulting from the above description. The
+diagram will be delivered independently and earlier than the rest of the project. (15%)
+2. Draw the relational diagram corresponding to the ER diagram that
+delivered or which will be given to you after the delivery deadline of
+your ER diagram. (5%)
+3. Develop the DB that the application will use based on the choices you have
+maked for the ER diagram between yours and the proposed solution. To
+set all the necessary restrictions that will ensure its correctness
+DB. These are integrity constraints, keys, referential integrity,
+price field integrity and user-defined constraints. SQL
+updates. DB insert, update and delete should be allowed for the tables
+data based on their relative integrity constraints
+set in the previous step. (10%)
+4. Enter information for each of the entities in the DB. In the DB you should ensure
+there is sufficient data to ensure that all queries are executed successfully and
+return the appropriate information. (5%)
+5. Define at least three appropriate indexes for the DB tables and
+justify your choice based on their usefulness to the questions
+in which they are used. (10%)
+6. Development of a suitable User Interface. The User Interface should be user friendly
+the user, should not require knowledge of SQL or database elements by the user and
+all requests must be given by appropriate forms within the application.
+Where appropriate, appropriate elements such as drop-downs should be used.
+down lists, radio buttons and more. Through which a user will be able to see:
+a. All purchases made based on multiple criteria, choose the
+shop that he is interested in and see purchases that have been made there. The criteria
+these should be the date he is interested in, the product units that have been
+purchased, the amount of the total purchase, purchases made through use
+card or cash and product category. These criteria should be
+independent, not all should be required and the list that the user will see must be
+updated with any variation in selection. (10%)
+b. The user interface should show the customer profile, and the markets that
+they visit. For each customer, the ten most popular products should be listed,
+how many and which stores he visits, a chart with the hours
+who usually visits each store as well as their average sum of
+transactions per week and per month. (10%)
+c. The user interface should also show conclusions that can be
+extracted from the data collected. These should
+include the most popular product pairs, the most popular positions inside
+the store for product placement, the percentage per product category
+that users trust products labeled "store", the hours that
+consumers spend more money as well as the percentage of the age
+groups visiting the store every hour. (10%)
+d. The user should still be able to see two views (aspects of the relational
+model), one with sales per product category per store and one with
+customer details. (10%)
+e. The User Interface should allow their insertion / deletion / editing
+information about customers, stores and products. (5%)
+f. The user will be able to change the price of a product and see the whole
+history of changes. (5%)
+g. Finally, you need to write two of your own analysis questions which
+will provide the user with some useful information that would not be easily
+recognizable by a simple reading of the data. (5%)
